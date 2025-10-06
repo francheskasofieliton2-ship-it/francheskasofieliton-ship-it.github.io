@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You Ayang 💜</title>
+
+  <!-- Font Links -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #d8b4fe, #c084fc, #a78bfa, #7c3aed);
+      color: white;
+      min-height: 100vh;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      text-align: center;
+      color: #f5d0fe;
+      text-shadow: 0 0 15px #a78bfa, 0 0 30px #c084fc;
+      animation: glow 2s ease-in-out infinite alternate;
+      margin-bottom: 20px;
+    }
+    .sofie {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      text-align: center;
+      color: #f5d0fe;
+      text-shadow: 0 0 15px #a78bfa, 0 0 30px #c084fc;
+      animation: glow 2s ease-in-out infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #a78bfa, 0 0 20px #c084fc; }
+      to { text-shadow: 0 0 20px #f5d0fe, 0 0 40px #c084fc; }
+    }
+
+    video {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #c084fc;
+      margin-bottom: 25px;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .image-grid img {
+      width: 45%;
+      max-width: 160px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #f0abfc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #f5d0fe, 0 0 50px #c084fc;
+    }
+
+    .message {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 25px;
+      padding: 25px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .popup-content {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 20px;
+      color: white;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0 0 25px #a78bfa;
+    }
+
+    .popup-content h2 {
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 10px;
+      color: #f5d0fe;
+    }
+
+    .popup-content p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>I Love You Ayang 💜</h1>
+
+  <!-- Video -->
+  <p class="sofie"> play this my love</p>
+  <video controls autoplay loop muted>
+    <source src="ayang.mp4" type="video/mp4">
+  </video>
+
+  <!-- Glowing Images -->
+  <div class="image-grid">
+    <img src="baby.mp3.heif" alt="First Dance" onclick="showPopup('firstDance')">
+    <img src="y.jpeg" alt="First Date" onclick="showPopup('firstDate')">
+    <img src="k.jpeg" alt="Timezone" onclick="showPopup('timezone')">
+    <img src="nah.jpeg" alt="Birthday" onclick="showPopup('birthday')">
+  </div>
+
+  <!-- Message -->
+  <div class="message">
+    <p>
+      Ayang, do you know how much I love you?  
+      Every single day with you makes me realize even more how important you are to me. The world feels so peaceful whenever you’re around like all my worries just fade away.  
+
+      Your smile shines brighter than the sunrise, and your voice feels like a soft melody that calms my soul. Even the simplest “I love you” from you stays in my mind all night long. I’m so thankful that I found someone as real, caring, and sweet as you.  
+
+      Thank you for loving me, not just for my good parts, but even for the ones I struggle to accept. With you, I don’t have to be perfect your presence alone already feels like home.  
+
+      You know, Ayang, if I could describe you with one color, it would be purple the color of peace, love, and magic. You’re the gentle calm in my chaos, the warmth in my cold days, and the soft glow that colors my world when everything feels dull. You are, and will always be, the color of my life. 💜  
+
+      I promise, no matter what happens, it will always be you in silence, in laughter, in every heartbeat.  
+      I love you endlessly, my Ayang. You are my peace and my happiness. 💜
+    </p>
+  </div>
+
+  <footer>Forever yours 💜</footer>
+
+  <!-- Popups -->
+  <div id="firstDance" class="popup">
+    <div class="popup-content">
+      <h2>Our First Dance 💃🕺</h2>
+      <p>That night felt magical, Ayang. When we danced, it felt like the world disappeared just you and me, swaying to the rhythm of our love.</p>
+    </div>
+  </div>
+
+  <div id="firstDate" class="popup">
+    <div class="popup-content">
+      <h2>Our First Date 📸</h2>
+      <p>Our first date and photo booth moment  an unforgettable memory. I’ll never forget how perfect that day was, how your smile lit up every second.</p>
+    </div>
+  </div>
+
+  <div id="timezone" class="popup">
+    <div class="popup-content">
+      <h2>Our Timezone Picture 🕹️</h2>
+      <p>They say couples who take pictures there will break up, but we’ll be the ones to prove that our love is stronger than any curse. 💜</p>
+    </div>
+  </div>
+
+  <div id="birthday" class="popup">
+    <div class="popup-content">
+      <h2>Your Birthday 🎂</h2>
+      <p>A special day because the love of my life was born. Every moment since then has been brighter because of you, my Ayang.</p>
+    </div>
+  </div>
+
+  <script>
+    function showPopup(id) {
+      const popup = document.getElementById(id);
+      popup.style.display = 'flex';
+      popup.onclick = () => popup.style.display = 'none';
+    }
+  </script>
+
+</body>
+  </html>
+  

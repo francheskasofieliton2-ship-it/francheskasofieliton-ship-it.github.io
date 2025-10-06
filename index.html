@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<title>I Love You Ayang 💜</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #d8b4fe, #c084fc, #a78bfa, #7c3aed);
+    color: white;
+    min-height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+ h1 {  
+   font-family: 'Dancing Script', cursive;  
+   font-size: 3em;  
+   text-align: center;  
+   color: #f5d0fe; 
+   text-shadow: 0 0 15px #a78bfa, 0 0 30px #c084fc;   
+   animation: glow 2s ease-in-out infinite alternate; 
+ }
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #a78bfa, 0 0 20px #c084fc; }
+    to { text-shadow: 0 0 20px #f5d0fe, 0 0 40px #c084fc; }
+  }
+
+  .message {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .photo {
+    border-radius: 20px;
+    overflow: hidden;
+    animation: glowBox 2s infinite alternate;
+  }
+
+  @keyframes glowBox {
+    from { box-shadow: 0 0 15px #d8b4fe; }
+    to { box-shadow: 0 0 35px #c084fc; }
+  }
+
+  .photo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .photo img:hover {
+    transform: scale(1.05);
+  }
+
+  .video-box {
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: glowBox 2s infinite alternate;
+    width: 250px;
+    height: 150px;
+  }
+
+  svg.video-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+
+<h1>I Love You Ayang 💜</h1>
+
+<div class="message">
+  <p>
+      Ayang, do you know how much I love you?  
+      Every single day with you makes me realize even more how important you are to me. The world feels so peaceful whenever you’re around — like all my worries just fade away.  
+
+      Your smile shines brighter than the sunrise, and your voice feels like a soft melody that calms my soul. Even the simplest “I love you” from you stays in my mind all night long. I’m so thankful that I found someone as real, caring, and sweet as you.  
+
+      Thank you for loving me, not just for my good parts, but even for the ones I struggle to accept. With you, I don’t have to be perfect — your presence alone already feels like home.  
+
+      You know, Ayang, if I could describe you with one color, it would be purple — the color of peace, love, and magic. You’re the gentle calm in my chaos, the warmth in my cold days, and the soft glow that colors my world when everything feels dull. You are, and will always be, the color of my life. 💜  
+
+      I promise, no matter what happens, it will always be you — in silence, in laughter, in every heartbeat.  
+      I love you endlessly, my Ayang. You are my peace and my happiness. 💜
+  </p>
+</div>
+
+<div class="gallery">
+  <div class="photo" onclick="showMessage('baby')">
+    <img src="baby.mp3.heif" alt="First Dance">
+  </div>
+  <div class="photo" onclick="showMessage('y')">
+    <img src="y.jpeg" alt="First Date">
+  </div>
+  <div class="photo" onclick="showMessage('k')">
+    <img src="k.jpeg" alt="Timezone Picture">
+  </div>
+  <div class="photo" onclick="showMessage('nah')">
+    <img src="nah.jpeg" alt="Birthday">
+  </div>
+</div>
+
+<div class="video-box">
+  <svg class="video-frame" viewBox="0 0 250 150" onclick="toggleVideo()">
+    <foreignObject x="0" y="0" width="250" height="150">
+      <video id="ayangVideo" src="ayang.mp4" preload="metadata" loop></video>
+    </foreignObject>
+  </svg>
+</div>
+
+<div id="baby" class="message" style="display:none;">
+  Our first dance — it felt like time stopped, and it was just us in the world. That moment will forever be one of my favorites. 💃🕺
+</div>
+
+<div id="y" class="message" style="display:none;">
+  Our first date and first photo booth together 💜 an unforgettable memory that started our story — just you and me, smiling endlessly.
+</div>
+
+<div id="k" class="message" style="display:none;">
+  Our first Timezone picture! They said there’s a curse — but not for us. We’ll prove that true love can break any curse. 💫
+</div>
+
+<div id="nah" class="message" style="display:none;">
+  Your birthday — the day the love of my life was born. A reminder that the world became more beautiful because of you. 🎂💜
+</div>
+
+<script>
+  function showMessage(id) {
+    const messages = document.querySelectorAll('.message');
+    messages.forEach(msg => {
+      if (msg.id !== '') msg.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function toggleVideo() {
+    const video = document.getElementById('ayangVideo');
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+</script>
+
+</body>
+  </html>
+  
